@@ -44,7 +44,7 @@ $R1 = (($monto_jubilacion-$saldo_actual*(1+$interes_mensual)*$periodos)*($intere
 $R2 = $R1*$periodos;
 $R3 = $monto_jubilacion - $R2;
 
-/*APV mensual din descuento legal*/
+/*APV mensual sin descuento legal*/
 $apv_mensual = $R3 - (($remuneracion_mensual*0.1)*$periodos);
 
 ?>
