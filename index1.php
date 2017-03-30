@@ -34,5 +34,9 @@ while ($i<$periodos){
 $apv = $saldo_actual + $ahorro;
 
 /*Calcular Pensión con APV (sin intereses)*/
-$pension_apv = $apv + (($remuneracion_mensual*0.1)*$periodos);
+if($sexo == 'femenino'){
+	$pension_apv = ($apv + (($remuneracion_mensual*0.1)*$periodos))/(($esperanza_vida_mujeres-$edad_jubilacion)/12);
+}elseif($sexo == 'masculino'){
+	$pension_apv = ($apv + (($remuneracion_mensual*0.1)*$periodos))/(($esperanza_vida_hombres-$edad_jubilacion)/12);
+}
 ?>
