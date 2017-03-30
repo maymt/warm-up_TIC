@@ -10,12 +10,10 @@ $interes_anual = $_POST['interes_anual'];
 $interes_mensual = ($interes_anual/100)/12;
 
 if($sexo == 'femenino'){
-	$monto_jubilacion = $pension_esperada*($esperanza_vida_mujeres-$edad_jubilacion);
 	if(is_null($edad_jubilacion)){
 		$edad_jubilacion = 60;
 	}
-}else{
-	$monto_jubilacion = $pension_esperada*($esperanza_vida_hombres-$edad_jubilacion);
+}elseif($sexo == 'masculino'){
 	if(is_null($edad_jubilacion)){
 		$edad_jubilacion = 65;
 	}
